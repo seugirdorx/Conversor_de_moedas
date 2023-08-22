@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@200&family=Roboto:wght@300;400&family=Varela+Round&display=swap");
+
+/*-------------------- CSS GERAIS --------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Lexend Exa, sans-serif;
+}
+
+.fundo {
+    background-image: url(imgs/circulos.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.conversor-de-moedas {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    margin: 1rem;
+    gap: 0.3rem;
+}
+
+.moeda {
+    width: 2rem;
+    height: 2rem;
+}
+
+.input {
+    width: 15rem;
+    height: 1rem;
+    text-align: center;
+    padding: 1rem;
+    border: none;
+}
+
+.form-input {
+    display: flex;
+    border: 0.2rem solid;
+    background-color: #ffffff;
+    border-image: linear-gradient(to bottom, #ffff00, #000000, #0000ff);
+    border-image-slice: 1;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.form-input img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.3rem;
+}
+
+.botao {
+    width: 17.5rem;
+    height: 2rem;
+    background-color: #000000;
+    color: #ffffff;
+    border-image: linear-gradient(to bottom, #ffff00, #000000, #0000ff);
+    border-image-slice: 1;
+    margin-top: 1.5rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.botao:hover {
+    filter: drop-shadow(0 0 0.3rem #ffffff);
+}
+
+.login-cadastro {
+    display: flex;
+    font-size: 0.8rem;
+    margin: 2rem;
+}
+
+.login-cadastro a {
+    color: #0000ff;
+    margin-left: 0.5rem;
+}
+
+
+/*-------------------- CSS PÁGINA DE LOGIN --------------------*/
+
+.body1 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.fundo-login {
+    width: 25rem;
+    height: 30rem;
+    border-radius: 2rem;
+    border: 0.01rem solid rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    gap: 1rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.esqueceu-senha {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.login-outros {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.login-redes {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+.icons {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icons:hover {
+    filter: drop-shadow(0 0 0.3rem white);
+}
+
+
+@media (max-width: 500px) {
+    .fundo-login {
+        width: 70%;
+    }
+
+    .input {
+        width: 7rem;
+    }
+
+    .form-input {
+        width: 10rem;
+    }
+
+    .botao {
+        width: 10rem;
+    }
+
+    .conversor-de-moedas {
+        font-size: 0.8rem;
+    }
+
+    .login-cadastro {
+        font-size: 0.6rem;
+        margin: 0;
+    }
+
+    .login-cadastro a {
+        color: #ffff00;
+    }
+
+    .icons {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .login-outros p {
+        font-size: 0.6rem;
+    }
+
+    .esqueceu-senha {
+        font-size: 0.6rem;
+    }
+}
+
+
+/*-------------------- CSS PÁGINA DE CADASTRO --------------------*/
+
+.body2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.fundo-cadastro {
+    width: 25rem;
+    height: 30rem;
+    border-radius: 2rem;
+    border: 0.01rem solid rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.background {
+    background-color: #000000;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.moedas {
+    position: absolute;
+    display: flex;
+}
+
+.moedas span {
+    background-image: url(./imgs/moeda1.png);
+    width: 7rem;
+    height: 7rem;
+    background-size: cover;
+    animation: animacao calc(30s / var(--i)) linear infinite;
+}
+
+.moedas span:nth-of-type(even) {
+    background-image: url(./imgs/moeda2.png);
+}
+
+@keyframes animacao {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+
+    100% {
+        transform: translateY(-15vh) scale(1)
+    }
+}
+
+/* 
+.container2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .cadastro-area{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 0.2rem solid #0000ff;
+    border-radius: 1rem;   
+} */
+/* 
+.cadastro-imagem {
+    width: 50%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.cadastro-imagem img{
+    width: 30rem;
+    height: 30rem;
+} */
+/* 
+.cadastro-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+@media (max-width: 500px) {
+    .fundo-cadastro{
+        width: 70%;
+    }
+
+    .login-cadastro{
+        margin-top: 1rem;
+    }
+    
+}
+
+/*-------------------- CSS PÁGINA PRINCIPAL --------------------*/
+
+
+.fundo-principal {
+    width: 100%;
+    height: 20rem;
+    background-size: cover;
+    transform: rotateX(180deg);
+    position: absolute;
+}
+
+.fundo-area {
+    width: 80%;
+    height: 20rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    box-shadow: 0.1rem 0.1rem 0.5rem;
+}
+
+.navbar {
+    display: flex;
+    top: 50%;
+    color: #ffffff;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.opcoes {
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+.opcoes a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+.opcao {
+    transition: 0.3s;
+}
+
+.opcao:hover {
+    border-bottom: 0.2rem solid #ffffff;
+    filter: drop-shadow(0 0 0.3rem #ffffff);
+
+}
+
+.icons2 {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icons2:hover {
+    filter: drop-shadow(0 0 0.3rem #ffffff);
+}
+
+.input2 {
+    width: 10rem;
+    height: 2rem;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.3rem;
+    border: none;
+}
+
+.form2 {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.converter {
+    display: flex;
+    justify-content: center;
+}
